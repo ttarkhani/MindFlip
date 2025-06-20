@@ -1,0 +1,57 @@
+.header {
+  margin-top: 8rem;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: #000;
+  font-weight: bold;
+}
+
+.text{
+    font-size: 1.2rem;
+    font-family: 'Baloo 2', cursive;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+.header-icon {
+  width: 100px;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.start-button {
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Baloo 2', cursive;
+}
+
+.start-button:hover {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
