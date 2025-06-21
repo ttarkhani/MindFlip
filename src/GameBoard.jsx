@@ -4,34 +4,35 @@ import WinScreen from "./WinScreen";
 import "./GameBoard.css";
 
 const allImages = {
-  easy: ["/cat.png", "/dog.jpg"],
-  medium: ["/cat.png", "/dog.jpg", "/crab.png", "/monkey.png"],
-  hard: [
-    "/cat.png",
-    "/dog.jpg",
-    "/crab.png",
-    "/monkey.png",
-    "/tiger.png",
-    "/octopus.png",
-    "/elephant.png",
-    "/hippo.png",
+  easy: [`${import.meta.env.BASE_URL}cat.png`, `${import.meta.env.BASE_URL}dog.jpg`],
+  medium: [
+    `${import.meta.env.BASE_URL}cat.png`,
+    `${import.meta.env.BASE_URL}dog.jpg`,
+    `${import.meta.env.BASE_URL}crab.png`,
+    `${import.meta.env.BASE_URL}monkey.png`
   ],
+  hard: [
+    `${import.meta.env.BASE_URL}cat.png`,
+    `${import.meta.env.BASE_URL}dog.jpg`,
+    `${import.meta.env.BASE_URL}crab.png`,
+    `${import.meta.env.BASE_URL}monkey.png`,
+    `${import.meta.env.BASE_URL}tiger.png`,
+    `${import.meta.env.BASE_URL}octopus.png`,
+    `${import.meta.env.BASE_URL}elephant.png`,
+    `${import.meta.env.BASE_URL}hippo.png`
+  ]
 };
 
 function shuffleCards(images) {
-  let selectedImages = [...images];
-  const cardPool = [...selectedImages, ...selectedImages];
-  if (cardPool.length % 2 !== 0) cardPool.pop(); 
-
+  const cardPool = [...images, ...images];
   const cards = cardPool
     .map((src, idx) => ({
-      id: idx + "_" + Math.random(),
+      id: `${idx}_${Math.random()}`,
       src,
       flipped: false,
       matched: false,
     }))
     .sort(() => Math.random() - 0.5);
-
   return cards;
 }
 

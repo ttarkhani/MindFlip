@@ -20,7 +20,11 @@ function App() {
         }}
         style={{ cursor: 'pointer' }}
       >
-        <img src="/logo.png" alt="Mind Game Logo" className="page-logo" />
+        <img
+          src={`${import.meta.env.BASE_URL}logo.png`}
+          alt="Mind Game Logo"
+          className="page-logo"
+        />
       </div>
 
       <div className="app-container">
@@ -47,4 +51,3 @@ function App() {
 }
 
 export default App;
-

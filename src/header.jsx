@@ -7,7 +7,11 @@ function Header({ onStart, goHome }) {
     <header className="header">
       <div onClick={goHome} style={{ cursor: 'pointer' }}>
         <h1>Mind Flip</h1>
-        <img src="/brain.png" alt="Brain Icon" className="header-icon" />
+        <img
+          src={`${import.meta.env.BASE_URL}brain.png`}
+          alt="Brain Icon"
+          className="header-icon"
+        />
       </div>
       <p className="text">Test your mind with this game</p>
       <button className="start-button" onClick={onStart}>
@@ -18,4 +22,3 @@ function Header({ onStart, goHome }) {
 }
 
 export default Header;
-
