@@ -1,0 +1,11 @@
+.status-panel {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: white;
+  background-color: black;
+  padding: 1rem;
+  border-radius: 8px;
+}
