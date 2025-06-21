@@ -1,5 +1,5 @@
 import React from 'react';
-import './DifficultySelection.css'; // Adjust path if needed
+import './DifficultySelection.css'; 
 
 function DifficultySelection({ setDifficulty }) {
   return (

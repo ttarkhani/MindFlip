@@ -51,7 +51,7 @@
   color: #888;
 }
 .app-container {
-  max-width: 600px;     /* Or bigger, depending on your design */
+  max-width: 600px;    
   margin: 0 auto;
   padding: 2rem 0 3rem 0;
   display: flex;

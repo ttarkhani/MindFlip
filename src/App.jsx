@@ -7,16 +7,31 @@ import GameBoard from './GameBoard.jsx';
 import StatusPanel from './status.jsx';
 
 function App() {
-  
   const [gameStarted, setGameStarted] = useState(false);
-  const[difficulty, setDifficulty] = useState(null);
-  
+  const [difficulty, setDifficulty] = useState(null);
+
   return (
     <>
-      <img src="/logo.png" alt="Mind Game Logo" className="page-logo" />
+      <div
+        className="page-logo-wrapper"
+        onClick={() => {
+          setGameStarted(false);
+          setDifficulty(null);
+        }}
+        style={{ cursor: 'pointer' }}
+      >
+        <img src="/logo.png" alt="Mind Game Logo" className="page-logo" />
+      </div>
+
       <div className="app-container">
         {!gameStarted ? (
-          <Header onStart={() => setGameStarted(true)} />
+          <Header
+            onStart={() => setGameStarted(true)}
+            goHome={() => {
+              setGameStarted(false);
+              setDifficulty(null);
+            }}
+          />
         ) : !difficulty ? (
           <DifficultySelection setDifficulty={setDifficulty} />
         ) : (
@@ -25,9 +40,11 @@ function App() {
           </>
         )}
       </div>
+
       <Footer />
     </>
   );
 }
 
 export default App;
+

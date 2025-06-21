@@ -1,4 +1,3 @@
-// status.jsx
 import React from "react";
 import "./status.css";
 
