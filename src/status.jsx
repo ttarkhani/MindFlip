@@ -1,12 +1,13 @@
-import React from 'react';
-import './assets/status.css';
+// status.jsx
+import React from "react";
+import "./status.css";
 
-function StatusPanel() {
+function StatusPanel({ time, moves, misses }) {
   return (
     <div className="status-panel">
-      <p>Time: 0s</p>
-      <p>Moves: 0</p>
-      <p>Misses: 0</p>
+      <p>Time: {time}s</p>
+      <p>Moves: {moves}</p>
+      <p>Misses: {misses}</p>
     </div>
   );
 }

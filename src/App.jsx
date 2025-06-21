@@ -3,6 +3,8 @@ import './App.css';
 import Header from './header.jsx';
 import Footer from './footer.jsx';
 import DifficultySelection from './DifficultySelection.jsx';
+import GameBoard from './GameBoard.jsx';
+import StatusPanel from './status.jsx';
 
 function App() {
   
@@ -20,7 +22,6 @@ function App() {
         ) : (
           <>
             <GameBoard difficulty={difficulty} />
-            <StatusPanel />
           </>
         )}
       </div>
